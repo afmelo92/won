@@ -1,7 +1,10 @@
 import * as S from './styles'
 // import Image from 'next/image'
 
-const Main = () => (
+const Main = ({
+  title = 'React Avançado',
+  description = 'Typescript, NextJS e Styled Components'
+}) => (
   <S.Wrapper>
     {/* <Image
       src="/img/logo.svg"
@@ -12,8 +15,8 @@ const Main = () => (
       className=""
     /> */}
     <S.Logo src="/img/logo.svg" alt="logo" />
-    <S.Title>React Avançado</S.Title>
-    <S.Description>Typescript, NextJS e Styled Components</S.Description>
+    <S.Title>{title}</S.Title>
+    <S.Description>{description}</S.Description>
     {/* <Image
       src="/img/hero-illustration.svg"
       alt="theme-image"
